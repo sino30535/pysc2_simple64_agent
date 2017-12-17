@@ -6,7 +6,7 @@ import numpy as np
 from pysc2.agents import base_agent
 from pysc2.lib import actions
 from pysc2.lib import features
-from dqn_network import DeepQNetwork
+from agent.dqn_network import DeepQNetwork
 
 # General actions
 _NO_OP = actions.FUNCTIONS.no_op.id
@@ -145,6 +145,7 @@ REWARD = 0.1
 
 class DQNAgent(base_agent.BaseAgent):
     def __init__(self):
+        super(DQNAgent, self).__init__()
         self.dqnlearn = DeepQNetwork(12, 13,
                       minimap_size=64,
                       screen_size=84,
