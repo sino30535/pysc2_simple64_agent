@@ -3,10 +3,11 @@ import os
 
 import numpy as np
 
-from pysc2.agents import base_agent
+
 from pysc2.lib import actions
 from pysc2.lib import features
 from agent.dqn_network import DeepQNetwork
+from agent.base_agent import BaseAgent
 
 # General actions
 _NO_OP = actions.FUNCTIONS.no_op.id
