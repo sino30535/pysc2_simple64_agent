@@ -144,7 +144,7 @@ buildings = [
 REWARD = 0.1
 
 
-class DQNAgent(base_agent.BaseAgent):
+class DQNAgent(BaseAgent):
     def __init__(self):
         super(DQNAgent, self).__init__()
         self.dqnlearn = DeepQNetwork(12, 13,
